@@ -74,8 +74,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AcroPDF);
             this.Controls.Add(this.tsm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.tsm;
             this.Name = "FormPDF";
+            this.Text = "PDF Reader";
             ((System.ComponentModel.ISupportInitialize)(this.AcroPDF)).EndInit();
             this.tsm.ResumeLayout(false);
             this.tsm.PerformLayout();
