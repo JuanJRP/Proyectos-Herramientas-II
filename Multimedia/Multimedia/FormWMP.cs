@@ -19,7 +19,10 @@ namespace Multimedia
 {
     public partial class FormWMP : Form
     {
-        string url = "";
+        string[] lista;
+        List<string> Nombres = new List<string>();
+        int count = 0, opc = 0;
+
         public FormWMP()
         {
             InitializeComponent();
@@ -27,44 +30,73 @@ namespace Multimedia
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            open.Multiselect = true;
             if (open.ShowDialog() == DialogResult.OK)
             {
-                Player.URL = open.FileName;
-                playToolStripMenuItem.Enabled = true;
-                stopToolStripMenuItem.Enabled = true;
+                StopToolStripMenuItem.Enabled = true;
                 PreviusToolStripMenuItem.Enabled = true;
                 advanceToolStripMenuItem.Enabled = true;
                 removeToolStripMenuItem.Enabled = true;
+                lista = open.FileNames;
+                for (int i = 0; i < lista.Length; i++)
+                {
+                    Nombres.Add(lista[i]);
+                    Lista.Items.Add(lista[i]);
+                }
             }
         }
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Player.Ctlcontrols.play();
-        }
-
-        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Player.Ctlcontrols.pause();
+            switch (opc)
+            {
+                case 1:
+                    Player.Ctlcontrols.play();
+                    StopToolStripMenuItem.Text = "Stop";
+                    opc = 2;
+                    break;
+                case 2:
+                    Player.Ctlcontrols.pause();
+                    StopToolStripMenuItem.Text = "Play";
+                    opc = 1;
+                    break;
+            }
         }
 
         private void delayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Player.Ctlcontrols.previous();
+            if (count > 0)
+            {
+                Player.URL = Lista.Items[count - 1].ToString(); count--; Lista.SelectedIndex--;
+            }
         }
 
         private void advanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Player.Ctlcontrols.next();
+            if (Lista.Items.Count >= 0 && count < Lista.Items.Count - 1)
+            {
+                Player.URL = Lista.Items[count + 1].ToString(); count++; Lista.SelectedIndex++;
+            }
         }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Player.Ctlcontrols.stop();
+            if (Lista.SelectedIndex >= 0 && Lista.SelectedIndex <= Lista.Items.Count)
+            {
+                Nombres.RemoveAt(Lista.SelectedIndex);
+                Lista.Items.RemoveAt(Lista.SelectedIndex);
+            }
         }
 
-        private void listToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Lista_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(Lista.SelectedIndex >= 0)
+            {
+                Player.URL = Lista.Items[Lista.SelectedIndex].ToString();
+                count = Lista.SelectedIndex;
+                opc = 2;
+            }
         }
     }
 }

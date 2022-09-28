@@ -46,3 +46,7 @@ C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\obj\Debug\Multimedia.csproj.CoreCompileInputs.cache
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\obj\Debug\Multimedia.exe
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\obj\Debug\Multimedia.pdb
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\bin\Debug\Multimedia.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\bin\Debug\Multimedia.application
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\obj\Debug\Multimedia.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Multimedia\Multimedia\obj\Debug\Multimedia.application

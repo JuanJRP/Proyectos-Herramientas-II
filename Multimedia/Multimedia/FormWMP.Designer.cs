@@ -29,29 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWMP));
-            this.Player = new AxWMPLib.AxWindowsMediaPlayer();
             this.open = new System.Windows.Forms.OpenFileDialog();
             this.tsm = new System.Windows.Forms.MenuStrip();
             this.LoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PreviusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            this.Player = new AxWMPLib.AxWindowsMediaPlayer();
+            this.Lista = new System.Windows.Forms.ListBox();
             this.tsm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Player
-            // 
-            this.Player.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Player.Enabled = true;
-            this.Player.Location = new System.Drawing.Point(0, 0);
-            this.Player.Name = "Player";
-            this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
-            this.Player.Size = new System.Drawing.Size(800, 450);
-            this.Player.TabIndex = 0;
             // 
             // open
             // 
@@ -61,12 +50,10 @@
             // 
             this.tsm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoadToolStripMenuItem,
-            this.playToolStripMenuItem,
-            this.stopToolStripMenuItem,
-            this.PreviusToolStripMenuItem,
-            this.advanceToolStripMenuItem,
             this.removeToolStripMenuItem,
-            this.listToolStripMenuItem});
+            this.StopToolStripMenuItem,
+            this.PreviusToolStripMenuItem,
+            this.advanceToolStripMenuItem});
             this.tsm.Location = new System.Drawing.Point(0, 0);
             this.tsm.Name = "tsm";
             this.tsm.Size = new System.Drawing.Size(800, 24);
@@ -80,21 +67,21 @@
             this.LoadToolStripMenuItem.Text = "Load";
             this.LoadToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
-            // playToolStripMenuItem
+            // removeToolStripMenuItem
             // 
-            this.playToolStripMenuItem.Enabled = false;
-            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.playToolStripMenuItem.Text = "Play";
-            this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            this.removeToolStripMenuItem.Enabled = false;
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
-            // stopToolStripMenuItem
+            // StopToolStripMenuItem
             // 
-            this.stopToolStripMenuItem.Enabled = false;
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.stopToolStripMenuItem.Text = "Stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            this.StopToolStripMenuItem.Enabled = false;
+            this.StopToolStripMenuItem.Name = "StopToolStripMenuItem";
+            this.StopToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.StopToolStripMenuItem.Text = "Stop";
+            this.StopToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // PreviusToolStripMenuItem
             // 
@@ -112,20 +99,23 @@
             this.advanceToolStripMenuItem.Text = "Advance";
             this.advanceToolStripMenuItem.Click += new System.EventHandler(this.advanceToolStripMenuItem_Click);
             // 
-            // removeToolStripMenuItem
+            // Player
             // 
-            this.removeToolStripMenuItem.Enabled = false;
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.removeToolStripMenuItem.Text = "Remove";
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            this.Player.Enabled = true;
+            this.Player.Location = new System.Drawing.Point(0, 0);
+            this.Player.Name = "Player";
+            this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
+            this.Player.Size = new System.Drawing.Size(800, 339);
+            this.Player.TabIndex = 0;
             // 
-            // listToolStripMenuItem
+            // Lista
             // 
-            this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.listToolStripMenuItem.Text = "List";
-            this.listToolStripMenuItem.Click += new System.EventHandler(this.listToolStripMenuItem_Click);
+            this.Lista.FormattingEnabled = true;
+            this.Lista.Location = new System.Drawing.Point(0, 339);
+            this.Lista.Name = "Lista";
+            this.Lista.Size = new System.Drawing.Size(802, 121);
+            this.Lista.TabIndex = 3;
+            this.Lista.SelectedIndexChanged += new System.EventHandler(this.Lista_SelectedIndexChanged);
             // 
             // FormWMP
             // 
@@ -133,15 +123,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Lista);
             this.Controls.Add(this.tsm);
             this.Controls.Add(this.Player);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.tsm;
             this.Name = "FormWMP";
             this.Text = "Reproductor WMP";
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.tsm.ResumeLayout(false);
             this.tsm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,12 +145,11 @@
         private System.Windows.Forms.OpenFileDialog open;
         private System.Windows.Forms.MenuStrip tsm;
         private System.Windows.Forms.ToolStripMenuItem LoadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem StopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PreviusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
+        private System.Windows.Forms.ListBox Lista;
     }
 }
 

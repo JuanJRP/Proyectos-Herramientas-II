@@ -46,3 +46,7 @@ C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browse
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\obj\Debug\Web Browser.csproj.CoreCompileInputs.cache
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\obj\Debug\Web Browser.exe
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\obj\Debug\Web Browser.pdb
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\bin\Debug\Web Browser.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\bin\Debug\Web Browser.application
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\obj\Debug\Web Browser.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\Web Browser\Web Browser\obj\Debug\Web Browser.application

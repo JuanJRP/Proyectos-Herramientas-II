@@ -30,3 +30,7 @@ C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.csproj.CoreCompileInputs.cache
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.exe
 C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.pdb
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\bin\Debug\PDF.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\bin\Debug\PDF.application
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.exe.manifest
+C:\Users\jojan\Desktop\Juan Jose\Proyectos Herramientas 2\PDF\PDF\obj\Debug\PDF.application

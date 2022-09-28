@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PDF.exe" version="1.0.0.0" publicKeyToken="bd1c46117672b882" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PDF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PDF.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.AcroPDFLib.dll" size="8192">
+      <assemblyIdentity name="AxInterop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ve9/OLpCS1todf8GQ2uzM7rvHJOheECEyHmJxc+uCfM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.AcroPDFLib.dll" size="11776">
+      <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mK7+hdvMrOVfLlkLXulc4y6TI6OanIIAiAZfdg2Y5N4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PDF.exe" size="14248">
+      <assemblyIdentity name="PDF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>gnh8YSmJW0SPq4SDmANxRr1IZSZgqfZqG6vMfcXVHg4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="PDF.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP\jojan" issuerKeyHash="36a049b4345e5bd82d4f6a7e660333b7f90e6075" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>FOb23v7tNAeoNTtItKjbbGasgrNQeQtt0xuxHS6nOx4=</DigestValue></Reference></SignedInfo><SignatureValue>iBgCknB7jr8NDYqGa1ZftSE1zBBbYkgviF4bhcvO4+bW/EFn54Bp0jSntXT7JGfQ6McOdIEr6zljn+/guiBW6KqlkT/QkudC9grtCsJuH/fxeO3pB3kQ8Kb7cwNAzGGhqAAfTiH5E49vQnG3LpT2aKn6EyiAvFHZCaehAjBktJo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1DfHz9zOurzP0Hic+IBQ4qwU7LabeexmvwkVFC9UMAfu51SSpIB0aNlcrdwGhwOus2l9xivB8L33Tso9R7BUJN0EWdTmN3w0O3+k1FStrfVUbo0L+ydofyEtLu6+G9X4/1KKK0L9mUcSTqILV4eO+Khm7S/5SFKUsTvh0p0rSVU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1e3ba72e1db11bd36d0b7950b382ac666cdba8b4483b35a80734edfedef6e614" Description="" Url=""><as:assemblyIdentity name="PDF.exe" version="1.0.0.0" publicKeyToken="bd1c46117672b882" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP\jojan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>NGmvUZVx6P3kRKXU8LZcak5ZIbnxOUewzskX+PdBT1I=</DigestValue></Reference></SignedInfo><SignatureValue>NGXiiBb2iQ2XGUisuejyKExOdNQ8eGQxWSmIyBltgGhYD/qO2UKnwCarvjc0sg1QV+KXYeJ/3ZxmfuxYF75ehk//5jwMBNd/GDqY3NUMX3ecCts/LxUHwFc27qdTkJq1jrYwzCWDvVxlHe4F041xwyonUv868GZUpAHRau28pog=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1DfHz9zOurzP0Hic+IBQ4qwU7LabeexmvwkVFC9UMAfu51SSpIB0aNlcrdwGhwOus2l9xivB8L33Tso9R7BUJN0EWdTmN3w0O3+k1FStrfVUbo0L+ydofyEtLu6+G9X4/1KKK0L9mUcSTqILV4eO+Khm7S/5SFKUsTvh0p0rSVU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQIxp1btZdcZ9CpYRryxtxyzANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgATABBAFAAVABPAFAAXABqAG8AagBhAG4wHhcNMjIwOTI4MDM0NDU4WhcNMjMwOTI4MDk0NDU4WjAjMSEwHwYDVQQDHhgATABBAFAAVABPAFAAXABqAG8AagBhAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANQ3x8/czrq8z9B4nPiAUOKsFOy2m3nsZr8JFRQvVDAH7udUkqSAdGjZXK3cBocDrrNpfcYrwfC9907KPUewVCTdBFnU5jd8NDt/pNRUra31VG6NC/snaH8hLS7uvhvV+P9SiitC/ZlHEk6iC1eHjvioZu0v+UhSlLE74dKdK0lVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAWWstHLd2xgkDNHk6S2/JP0FvSfM3EKigSmaGVuBTrqUPmIrwK3gun0m5ncI6TBtUAOmGGuJUjAuGeMjf1K6pJLEiVJmEoRRKA1EftRbv47PpzWIAodrjCrhK2wq5f1CYL9YuLVGYbL+EZnvpH7tM5X/GUdm1cAsos/fH6Ny/AV4=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
